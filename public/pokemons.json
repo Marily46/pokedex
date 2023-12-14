@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "pikachu",
+    "images": {
+      "front": "/images/pikachu_front.png",
+      "side": "/images/pikachu_side.jpeg",
+      "back": "/images/pikachu_back.png"
+    },
+    "abilities": ["static", "lightning-rod"],
+    "moves": ["quick-attack", "electro-ball"]
+  },
+  {
+    "id": 2,
+    "name": "houndoom",
+    "images": {
+      "front": "/images/houndoom_front.png",
+      "side": "/images/houndoom_side.png",
+      "back": "/images/houndoom_back.png"
+    },
+    "abilities": ["early-bird", "flash-fire"],
+    "moves": ["bite", "ember"]
+  }
+]
