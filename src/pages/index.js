@@ -40,6 +40,16 @@ export default function Home() {
         <meta name='description' content='Pokedex Application' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VX5KKW2XBR"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VK5XKW2XBR');
+          `
+        }}></script>
       </Head>
       <main className={styles.pokedexContainer}>
         <h1 className={styles.pokedexTitle}>Pokédex 1GEN</h1>
