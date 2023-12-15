@@ -56,12 +56,11 @@ export default function Home() {
         {loading && <p className={styles.loading}>Loading...</p>}
         {searchResults && (
           <div className={styles.searchResults}>
-            <img src={searchResults.sprites.front_default} alt={searchResults.name} className={styles.pokemonImage} />
-            <h2 className={styles.pokemonName}>{searchResults.name}</h2>
-            <p className={styles.pokemonInfo}>Abilities: {searchResults.abilities.map(ability => ability.ability.name).join(', ')}</p>
-            <p className={styles.pokemonInfo}>Moves: {searchResults.moves.map(move => move.move.name).join(', ')}</p>
-            <Link href={`/pokemon/${searchResults.name}`}>Pokemon details</Link>
-          </div>
+          <img src={searchResults?.sprites?.front_default} alt={searchResults?.name} className={styles.pokemonImage} />
+          <h2 className={styles.pokemonName}>{searchResults?.name}</h2>
+          <p className={styles.pokemonInfo}>Abilities: {searchResults?.abilities?.map(ability => ability.ability.name).join(', ')}</p>
+          <p className={styles.pokemonInfo}>Moves: {searchResults?.moves?.map(move => move.move.name).join(', ')}</p>
+        </div>
         )}
         <section className={styles.pokemonList}>
           {pokemons.map(pokemon => (

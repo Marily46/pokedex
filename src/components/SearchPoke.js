@@ -2,9 +2,15 @@ import React from 'react'
 
 export const SearchPoke = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState(null);
 
   const handleSearch = () => {
-    onSearch(inputValue.trim().toLowerCase());
+    if (inputValue.trim().toLowerCase()) {
+      onSearch(inputValue.trim().toLowerCase());
+      setError(null);
+    } else {
+      setError(`Pokémon ${inputValue} not found`);
+    }
   };
 
   return (
@@ -16,6 +22,7 @@ export const SearchPoke = ({ onSearch }) => {
         placeholder="Enter Pokémon name"
       />
       <button onClick={handleSearch}>Search</button>
+      {error && <p>{error}</p>}
     </div>
   );
 }

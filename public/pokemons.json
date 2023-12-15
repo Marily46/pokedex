@@ -4,7 +4,7 @@
     "name": "pikachu",
     "images": {
       "front": "/images/pikachu_front.png",
-      "side": "/images/pikachu_side.jpeg",
+      "side": "/images/pikachu_side.jpg",
       "back": "/images/pikachu_back.png"
     },
     "abilities": ["static", "lightning-rod"],

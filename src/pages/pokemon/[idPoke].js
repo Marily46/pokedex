@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import styles from '../../styles/Details.module.scss';
+import styles from '../../styles/PokeDesc.module.scss';
 
 function DetailsPoke() {
   const router = useRouter();
@@ -22,29 +23,24 @@ function DetailsPoke() {
   }
 
   return (
-    <div className="pokemon-container">
+    <div className={styles.pokedexContainer}>
       {pokemon ? (
-        <div>
-          <div>
-            <img src={pokemon.images[currentImage]} alt={`${pokemon.name} ${currentImage}`} onClick={handleClick} />
+        <div className={styles.pokemonCard}>
+          <div className={styles.pokemonImage}>
+            <img src={pokemon.images[currentImage]} alt={`${pokemon.name} ${currentImage}`} onClick={handleClick} className={styles.pokeImageDesc} />
           </div>
 
-          <div className="pokemon-details">
-            <h1 className="pokedexTitle">{pokemon.name}</h1>
-            <p>Abilities: {pokemon.abilities.join(', ')}</p>
-            <p>Moves: {pokemon.moves.join(', ')}</p>
-
-            <div className="stats">
-
-            </div>
-
-            <div className="types">
-
-            </div>
+          <div className={styles.pokemonDetails}>
+            <h1 className={styles.pokedexTitle}>{pokemon.name}</h1>
+            <p className={styles.pokemonAbilities}><strong>Abilities:</strong> {pokemon.abilities.join(', ')}</p>
+            <p className={styles.pokemonMoves}><strong>Moves:</strong> {pokemon.moves.join(', ')}</p>
+          </div>
+          <div className={styles.backButtonContainer}>
+            <Link href={`/`}><button className={styles.backButton}>Back</button></Link>
           </div>
         </div>
       ) : (
-        <div>Cargando...</div>
+        <div className={styles.loading}>Cargando...</div>
       )}
     </div>
   );

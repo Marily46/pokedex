@@ -1,0 +1,87 @@
+.pokedexContainer {
+    background-image: url('/images/pokedexImg.png');
+    position: relative; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 701px;
+    height: 1000px;
+    margin: auto; 
+    border-radius: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.pokemonDetails {
+    margin-top: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    height: 123%;
+    border-radius: 15px;
+    width: 213px;
+}
+
+.pokedexTitle {
+    font-size: 24px; 
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.abilities, .moves {
+    font-size: 16px; 
+    color: #666;
+    margin: 5px 0;
+    text-align: center;
+} 
+
+.pokemonCard {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    height: 23%;
+    margin-top: -33%;
+    width: 73%;
+}
+
+.pokemonImage {
+    width: auto; 
+    height: auto; 
+    max-width: 200px; 
+    max-height: 200px; 
+    object-fit: contain; 
+}
+
+.pokeImageDesc{
+    width: 239px;
+    border-radius: 15px;
+}
+.backButtonContainer {
+    position: absolute;
+    bottom: 232px;
+    left: 12%;
+    transform: translateX(-50%);
+    border-radius: 65px;
+}
+
+.backButton {
+    display: inline-block;
+    padding: 39px 26px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50px;
+    cursor: pointer;
+    &:hover {
+        background-color: darken(#f00, 10%);
+    }
+}
